@@ -4,7 +4,7 @@
 
 import Test from "./classes/test";
 
-let myTest = new Test(1, "Jérémy");
+let myTest = new Test(1, "Noémie");
 
 console.log(myTest);
 myTest.sayHello();
