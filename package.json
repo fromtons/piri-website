@@ -1,0 +1,44 @@
+{
+  "name": "Jerek0Starter",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Jerek0/jerek0-starter.git"
+  },
+  "author": "Jerek0",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Jerek0/jerek0-starter/issues"
+  },
+  "homepage": "https://github.com/Jerek0/jerek0-starter/",
+  "dependencies": {
+    "autoprefixer": "^6.3.6",
+    "babel": "^6.5.2",
+    "babel-core": "^6.8.0",
+    "babel-preset-es2015": "^6.6.0",
+    "babelify": "^7.3.0",
+    "browser-sync": "^2.7.1",
+    "browserify": "^10.1.0",
+    "gulp": "^3.9.1",
+    "gulp-changed": "^1.2.1",
+    "gulp-clean": "^0.3.1",
+    "gulp-concat-css": "^2.2.0",
+    "gulp-imagemin": "^2.2.1",
+    "gulp-less": "^3.0.3",
+    "gulp-minify-css": "^1.1.1",
+    "gulp-notify": "^2.2.0",
+    "gulp-plumber": "^1.0.0",
+    "gulp-postcss": "^6.1.0",
+    "gulp-uglify": "^1.5.3",
+    "gulp-util": "^3.0.4",
+    "handlebars": "^3.0.3",
+    "lodash": "^3.8.0",
+    "pretty-hrtime": "^1.0.0",
+    "vinyl-buffer": "^1.0.0",
+    "vinyl-source-stream": "^1.1.0"
+  }
+}
