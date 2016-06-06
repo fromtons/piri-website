@@ -23,7 +23,7 @@ position: relative;
     position: absolute;
     bottom: -40px;
     left: 50%;
-    transform: translate(-50,0);
+    transform: translate(-50%,0);
     background-color: @colorRed;
     width: 30px;
     height: 1px;
@@ -39,15 +39,16 @@ h2{
 
 .chapeau{
   font-family: @fontTitle;
-  font-size: 30px;
+  font-size: 25px;
   font-weight: 100;
   line-height: 39px;
-  max-width: 960px;
+  max-width: 800px;
   margin: 0 auto 130px auto;
   span{
     font-family: @fontMain;
-    font-size: 24px;
+    font-size: @sizeMain;
     font-weight: 100;
+    line-height:normal;
     display: block;
   }
 }
@@ -56,17 +57,20 @@ section{
   position: relative;
   display: block;
   text-align: center;
-  margin: 40px auto;
+  margin: 140px auto;
+  max-width: 1024px;
+  width: 100%;
 }
 
 .container-col{
   display: flex;
   justify-content: space-around;
   article{
-    max-width: 520px;
+    max-width: 320px;
     width: 100%;
     p{
-      max-width: 365px;
+      max-width: 265px;
+      margin: auto;
       width: 100%;
     }
   }
@@ -96,7 +100,7 @@ figure{
 .piri{
   article{
     img{
-      height: 80px;
+      height: 50px;
       width: auto;
     }
   }
