@@ -1,0 +1,24 @@
+.piri{
+  article{
+    padding-bottom: 15px;
+    position: relative;
+    &::after{
+      content: '';
+      position: absolute;
+      right: 0;
+      bottom: 0px;
+      height: 120px;
+      width: 1px;
+      background-color: @colorRed;
+    }
+    &:last-child{
+      &::after{
+        content: none;
+      }
+    }
+    img{
+      height: 50px;
+      width: auto;
+    }
+  }
+}
