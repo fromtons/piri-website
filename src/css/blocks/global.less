@@ -1,3 +1,113 @@
-body {
-  background: @color1;
+body
+{
+  font-family: @fontMain;
+  font-size: @sizeMain;
+  font-weight: 100;
+
+  color: white;
+  background: @colorBack;
+  letter-spacing: 1px;
+  padding: 0 2%;
+}
+
+h1
+{
+  font-family: @fontTitle;
+  font-size: @sizeTitle;
+  font-weight: 100;
+position: relative;
+  letter-spacing: 2px;
+  margin-bottom: 100px;
+  &:after{
+    content: '';
+    position: absolute;
+    bottom: -40px;
+    left: 50%;
+    transform: translate(-50,0);
+    background-color: @colorRed;
+    width: 30px;
+    height: 1px;
+  }
+}
+
+h2{
+  font-size: @sizeMain;
+  font-family: @fontSubtitle;
+//  font-weight: 300;
+
+}
+
+.chapeau{
+  font-family: @fontTitle;
+  font-size: 30px;
+  font-weight: 100;
+  line-height: 39px;
+  max-width: 960px;
+  margin: 0 auto 130px auto;
+  span{
+    font-family: @fontMain;
+    font-size: 24px;
+    font-weight: 100;
+    display: block;
+  }
+}
+
+section{
+  position: relative;
+  display: block;
+  text-align: center;
+  margin: 40px auto;
+}
+
+.container-col{
+  display: flex;
+  justify-content: space-around;
+  article{
+    max-width: 520px;
+    width: 100%;
+    p{
+      max-width: 365px;
+      width: 100%;
+    }
+  }
+}
+
+figure{
+  max-width: 100%;
+  margin: auto;
+  padding: 0 5%;
+ img{
+    width: 100%;
+    height: auto;
+    margin: 0 auto 80px auto;
+    &.after{
+      content: '';
+      position: absolute;
+      bottom: -40px;
+      left: 50%;
+      transform: translate(-50,0);
+      background-color: @colorRed;
+      width: 30px;
+      height: 1px;
+    }
+ }
+}
+
+.piri{
+  article{
+    img{
+      height: 80px;
+      width: auto;
+    }
+  }
+}
+
+.product{
+  article{
+    img{
+      max-width: 190px;
+      width: 100%;
+      height: auto;
+    }
+  }
 }
