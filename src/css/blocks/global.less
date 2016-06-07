@@ -15,7 +15,7 @@ h1
   font-family: @fontTitle;
   font-size: @sizeTitle;
   font-weight: 100;
-position: relative;
+  position: relative;
   letter-spacing: 2px;
   margin-bottom: 100px;
   &:after{
@@ -33,7 +33,7 @@ position: relative;
 h2{
   font-size: @sizeMain;
   font-family: @fontSubtitle;
-//  font-weight: 300;
+  //  font-weight: 300;
 
 }
 
@@ -50,6 +50,9 @@ h2{
     font-weight: 100;
     line-height:normal;
     display: block;
+    max-width: 500px;
+    width: 100%;
+    margin: 10px auto;
   }
 }
 
@@ -80,29 +83,19 @@ figure{
   max-width: 100%;
   margin: auto;
   padding: 0 5%;
- img{
+  img{
     width: 100%;
     height: auto;
     margin: 0 auto 80px auto;
-    &.after{
-      content: '';
-      position: absolute;
-      bottom: -40px;
-      left: 50%;
-      transform: translate(-50,0);
-      background-color: @colorRed;
-      width: 30px;
-      height: 1px;
-    }
- }
-}
-
-.product{
-  article{
-    img{
-      max-width: 190px;
-      width: 100%;
-      height: auto;
-    }
+  }
+  &:after{
+    content: '';
+    position: absolute;
+    bottom: 20%;
+    left: 50%;
+    transform: translate(-50%,0);
+    background-color: @colorRed;
+    width: 30px;
+    height: 1px;
   }
 }
