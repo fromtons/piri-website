@@ -67,7 +67,7 @@ section{
 
 .container-col{
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   article{
     max-width: 320px;
     width: 100%;
@@ -97,5 +97,45 @@ figure{
     background-color: @colorRed;
     width: 30px;
     height: 1px;
+  }
+}
+
+.btn-social{
+  background-color: @colorPink;
+  border-radius: 50%;
+  display: block;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  margin: 0 10px;
+  img{
+    display: block;
+    width: 20px;
+    margin: 50% auto;
+    transform: translate(0,-50%);
+  }
+  &.facebook{
+    img{
+      width: 10px;
+    }
+  }
+}
+
+form{
+  input[type="email"], input[type="text"]{
+    display: inline-block;
+    width: 300px;
+    border-radius:20px;
+    border: none;
+    padding:10px 20px;
+    font-family: @fontBtn;
+    margin-right: 20px;
+    &.focus{
+      border-radius:20px;
+    }
+  }
+  input[type="submit"]{
+    display: inline-block;
+    border: none;
   }
 }
