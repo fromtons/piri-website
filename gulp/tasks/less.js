@@ -20,9 +20,6 @@ gulp.task('lessClean', () => {
 
 gulp.task('less', ['lessClean'], () => {
     return gulp.src(config.less.main)
-        .pipe(plumber({
-            errorHandler: handleErrors
-        }))
         .pipe(less({
             paths: [ path.join(config.less.src, 'less', 'includes') ]
         }))
