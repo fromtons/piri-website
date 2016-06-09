@@ -19,8 +19,8 @@ let app = {
     // build tween
     var tween = new TimelineMax ()
     .add([
-      TweenMax.fromTo("#layer_1", 1, {top: 1500}, {top: -200, ease: Linear.easeNone}),
-      TweenMax.fromTo("#layer_2", 1, {top: 500}, {top: -200, ease: Linear.easeNone}),
+      TweenMax.fromTo("#layer_1", 1, {top: 300}, {top: -500, ease: Linear.easeNone}),
+      TweenMax.fromTo("#layer_2", 1, {top: 100}, {top: -200, ease: Linear.easeNone}),
       TweenMax.fromTo("#layer_3", 1, {top: 50}, {top: -200, ease: Linear.easeNone}),
       TweenMax.fromTo("#layer_4", 1, {top: 350}, {top: 100, ease: Linear.easeNone}),
       TweenMax.fromTo("#layer_5", 1, {top: 400}, {top: 100, ease: Linear.easeNone}),
@@ -31,7 +31,7 @@ let app = {
     // build scene
     var scene = new ScrollMagic.Scene({triggerElement: ".piri", duration: document.body.clientHeight})
     .setTween(tween)
-    .addIndicators() // add indicators (requires plugin)
+  //  .addIndicators() // add indicators (requires plugin)
     .addTo(controller);
   },
 
