@@ -60,7 +60,7 @@ let app = {
     controller.scrollTo(function (target) {
       TweenMax.to(window, 0.5, {
         scrollTo : {
-          y : target, // scroll position of the target along y axis
+          y : target - 200, // scroll position of the target along y axis
           autoKill : true // allows user to kill scroll action smoothly
         },
         ease : Cubic.easeInOut
@@ -72,7 +72,7 @@ let app = {
     var onClickLinkMenu = function(e) {
       e.preventDefault();
       console.log("onClickLinkMenu");
-      var id = this.getAttribute("href");;
+      var id = this.getAttribute("href");
 
       // trigger scroll
       controller.scrollTo(id);

@@ -1,10 +1,17 @@
 header{
   width: 100%;
-  position: relative;
-  max-width: 1024px;
-  margin: 45px auto;
+  position: fixed;
+  left: 50%;
+  top: 0;
+  height: 100px;
+  z-index: 999;
+  transform: translateX(-50%);
+  background-color: @colorBack;
+  padding: 20px 0;
   nav{
-
+    max-width: 1024px;
+    width: 100%;
+    margin: 20px auto;
   }
   .logo{
     max-width: 100px;
