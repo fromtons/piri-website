@@ -1,8 +1,8 @@
 header{
   width: 100%;
   position: relative;
-    max-width: 1024px;
-    margin: 45px auto;
+  max-width: 1024px;
+  margin: 45px auto;
   nav{
 
   }
@@ -22,6 +22,31 @@ header{
       a{
         text-transform: uppercase;
         text-decoration: none;
+        display: inline-block;
+        transform: translateZ(0);
+        backface-visibility: hidden;
+        position: relative;
+        overflow: hidden;
+        padding-bottom: 5px;
+        &::before{
+          content: "";
+          position: absolute;
+          z-index: -1;
+          left: 50%;
+          right: 50%;
+          bottom: 0;
+          background: @colorLightest;
+          height: 1px;
+          transition-property: left, right;
+          transition-duration: 0.3s;
+          transition-timing-function: ease-out;
+        }
+        &:hover{
+          &:before{
+            left: 0;
+            right: 0;
+          }
+        }
       }
     }
     &.left{
@@ -35,6 +60,9 @@ header{
       li{
         a{
           color:@colorPink;
+          &::before{
+            background: @colorPink;
+          }
         }
       }
     }
