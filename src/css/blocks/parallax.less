@@ -1,0 +1,26 @@
+.parallax{
+  position: relative;
+  img{
+    position: absolute;
+    width: 100%;
+    height: auto;
+    left: 0;
+  }
+  &.layer_3{
+    z-index: -1;
+  }
+
+  > * {
+    will-change: transform;
+  }
+}
+
+.mea{
+  .parallax{
+    img{
+      left: 0;
+      top: 220px;
+      z-index: -1;
+    }
+  }
+}
