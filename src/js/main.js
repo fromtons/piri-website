@@ -15,6 +15,7 @@ let app = {
     this.registerSlider();
     this.registerSmoothAnchor();
     this.registerNewsletter();
+    this.menuMobile();
   },
 
   registerParallax: function() {
@@ -101,6 +102,21 @@ let app = {
       linkMenu[i].addEventListener('click', onClickLinkMenu, false);
     }
 
+  },
+
+  menuMobile : function(){
+
+    var menu = document.getElementById('menu');
+    var menuHamburger = document.getElementById('menu-hamburger');
+
+    menu.style.height = window.innerHeight + 'px';
+
+    var onClickMenuHamburger = function(e) {
+      this.classList.toggle('open');
+      menu.classList.toggle('open');
+    }
+
+    menuHamburger.addEventListener('click', onClickMenuHamburger, false);
   }
 };
 

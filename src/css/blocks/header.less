@@ -8,10 +8,19 @@ header{
   transform: translateX(-50%);
   background-color: @colorBack;
   padding: 20px 0;
+  #menu-hamburger{
+    display: none;
+  }
   nav{
     max-width: 1024px;
     width: 100%;
     margin: 20px auto;
+    &.nav-desktop{
+      display: block;
+    }
+    &.nav-mobile{
+      display: none;
+    }
   }
   .logo{
     max-width: 100px;
