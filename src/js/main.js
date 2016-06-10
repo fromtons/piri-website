@@ -14,6 +14,7 @@ let app = {
     this.registerParallax();
     this.registerSlider();
     this.registerSmoothAnchor();
+    this.registerNewsletter();
   },
 
   registerParallax: function() {
@@ -21,9 +22,9 @@ let app = {
     // build tween
     var tween = new TimelineMax ()
     .add([
-      TweenMax.fromTo("#layer_1", 1, {top: 300}, {top: -500, ease: Linear.easeNone}),
-      TweenMax.fromTo("#layer_2", 1, {top: 100}, {top: -200, ease: Linear.easeNone}),
-      TweenMax.fromTo("#layer_3", 1, {top: 0}, {top: -200, ease: Linear.easeNone}),
+      TweenMax.fromTo("#layer_1", 1, {top: 50}, {top: -400, ease: Linear.easeNone}),
+      TweenMax.fromTo("#layer_2", 1, {top: 80}, {top: -500, ease: Linear.easeNone}),
+      TweenMax.fromTo("#layer_3", 1, {top: 100}, {top: -600, ease: Linear.easeNone}),
       TweenMax.fromTo("#layer_4", 1, {top: 350}, {top: 100, ease: Linear.easeNone}),
       TweenMax.fromTo("#layer_5", 1, {top: 400}, {top: 100, ease: Linear.easeNone}),
       TweenMax.fromTo("#layer_6", 1, {top: 600}, {top: -100, ease: Linear.easeNone}),
@@ -38,6 +39,19 @@ let app = {
   },
 
   registerNewsletter: function() {
+    var emailInput = document.getElementById("email");
+    var emailButton = document.getElementById("email-btn");
+
+    emailButton.addEventListener("click", function (e) {
+      console.log("email listener");
+
+      if(email.checkValidity() === true) {
+        e.preventDefault();
+        TweenMax.fromTo(emailInput, 0.5, {opacity: 1}, {opacity: 0, display:'none', ease: Linear.easeNone});
+        TweenMax.fromTo(emailButton, 0.5, {opacity: 1}, {opacity: 0, display:'none', ease: Linear.easeNone});
+        TweenMax.fromTo("#email-msg", 1, {opacity: 0}, {opacity: 1, ease: Linear.easeNone});
+      }
+    });
 
   },
 
