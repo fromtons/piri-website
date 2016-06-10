@@ -11,7 +11,14 @@ let app = {
   },
 
   bindUIActions: function() {
-    this.registerParallax();
+    window.onresize = function(e){
+      if(window.innerWidth >= 850){
+          this.registerParallax();
+      }
+    }
+    if(window.innerWidth >= 850){
+        this.registerParallax();
+    }
     this.registerSlider();
     this.registerSmoothAnchor();
     this.registerNewsletter();
