@@ -11,13 +11,13 @@ let app = {
   },
 
   bindUIActions: function() {
-    window.onresize = function(e){
+    window.addEventListener('resize', function() {
       if(window.innerWidth >= 850){
-          this.registerParallax();
-      }
-    }
-    if(window.innerWidth >= 850){
         this.registerParallax();
+      }
+    });
+    if(window.innerWidth >= 850){
+      this.registerParallax();
     }
     this.registerSlider();
     this.registerSmoothAnchor();
@@ -93,7 +93,6 @@ let app = {
 
     var onClickLinkMenu = function(e) {
       e.preventDefault();
-      console.log("onClickLinkMenu");
       var id = this.getAttribute("href");
 
       // trigger scroll
@@ -116,7 +115,15 @@ let app = {
     var menu = document.getElementById('menu');
     var menuHamburger = document.getElementById('menu-hamburger');
 
-    menu.style.height = window.innerHeight + 'px';
+    window.addEventListener('resize', function() {
+      if(window.innerWidth <= 850){
+        menu.style.height = window.innerHeight + 'px';
+      }
+    });
+
+    if(window.innerWidth <= 850){
+      menu.style.height = window.innerHeight + 'px';
+    }
 
     var onClickMenuHamburger = function(e) {
       this.classList.toggle('open');
